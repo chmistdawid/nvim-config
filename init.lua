@@ -2,8 +2,10 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
+vim.cmd("set number")
 
 require("config.lazy")
+require("config.lsp")
 
 local builtin = require("telescope.builtin")
 vim.keymap.set('n', '<leader> ', builtin.find_files, { desc = 'Telescope find files' })
